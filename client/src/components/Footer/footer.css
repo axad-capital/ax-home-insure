@@ -1,0 +1,10 @@
+.footer-container {
+    height: 300px;
+    background-color: rgb(244, 248, 241);
+    text-align: center;
+    padding-top: 70px;
+}
+
+.footer-container a {
+    text-decoration: none;
+}
