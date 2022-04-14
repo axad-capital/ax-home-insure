@@ -29,6 +29,8 @@ function HomeComp() {
                 <h2 className='form-info'>Let us do the searching for you so you can see how much you can save with an affordable home owners insurance plan.</h2>
             </div>
 
+            <div className="line"></div>
+
             <div className='step-container'>
                 <h1 className="step-container-title">3 Easy Steps To Get Affordable Home Insurance</h1>
                 <div className='steps'>
@@ -46,6 +48,7 @@ function HomeComp() {
                     </div>
                 </div>
             </div>
+            <div className="line"></div>
         </div>
     )
 }
