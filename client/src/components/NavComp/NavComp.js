@@ -20,10 +20,13 @@ const NavComp = () => {
                                 <Link to='/' className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/about-us' className={location.pathname === '/about-us' ? 'nav-link active' : 'nav-link'}>About Us</Link>
+                                <a href='#about-us' className={location.pathname === '/about-us' ? 'nav-link active' : 'nav-link'}>About Us</a>
                             </li>
                             <li className="nav-item">
-                                <Link to='/what-is-home-insurance' className={location.pathname === '/what-is-home-insurance' ? 'nav-link active' : 'nav-link'}>What Is Home Insurance?</Link>
+                                <a href='#what-is' className={location.pathname === '/what-is-home-insurance' ? 'nav-link active' : 'nav-link'}>What Is Home Insurance?</a>
+                            </li>
+                            <li className="nav-item">
+                                <Link to='/get-quote' className={location.pathname === '/get-quote' ? 'nav-link active' : 'nav-link'}>Get A Quote</Link>
                             </li>
                         </ul>
                     </div>
