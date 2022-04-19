@@ -10,9 +10,9 @@ const QuotePage = () => {
             .then(data => {
                 let formData = {
                     id: uuidv4(),
-                    firstName: document.getElementById('first').value,
-                    lastName: document.getElementById('last').value,
-                    email: document.getElementById('email').value,
+                    // firstName: document.getElementById('first').value,
+                    // lastName: document.getElementById('last').value,
+                    // email: document.getElementById('email').value,
                     homeOwner: document.getElementById('home-owner').value,
                     insured: document.getElementById('insured').value,
                     phone: document.getElementById('phone-num').value,
@@ -30,9 +30,9 @@ const QuotePage = () => {
                         "ni_ref": "/thank-you"
                     },
                     "contact": {
-                        "first_name": formData.firstName,
-                        "last_name": formData.lastName,
-                        "email": formData.email,
+                        // "first_name": formData.firstName,
+                        // "last_name": formData.lastName,
+                        // "email": formData.email,
                         "zip": formData.zipcode,
                         "homeowner": formData.homeOwner,
                     },
@@ -67,16 +67,17 @@ const QuotePage = () => {
                 <h1 id='quote-heading'>Get A Free Quote Now</h1>
                 <p className='quote-sub-heading'>Stay Home & Find Affordable Car Insurance In 2 Minutes</p>
                 <div className='quote-form-info'>
-                    <label htmlFor="first">First Name</label>
-                    <input id='first' name='first' className='form-input' type="text" placeholder='First Name' />
-                    <label htmlFor="last">Last Name</label>
-                    <input id='last' name='last' className='form-input' type="text" placeholder='Last Name' />
+                    {/* <label htmlFor="first">First Name</label>
+                    <input id='first' name='first' className='form-input' type="text" placeholder='First Name' /> */}
+
+                    {/* <label htmlFor="last">Last Name</label>
+                    <input id='last' name='last' className='form-input' type="text" placeholder='Last Name' /> */}
 
                     <label className='zip-code-label' htmlFor="zip">Enter Your Zipcode</label>
                     <input id='form-zip' name='zip' className='form-input' type="text" placeholder='Zipcode' />
 
-                    <label htmlFor="email">Email</label>
-                    <input id='email' name='email' className='form-input' type="text" placeholder='Email' />
+                    {/* <label htmlFor="email">Email</label>
+                    <input id='email' name='email' className='form-input' type="text" placeholder='Email' /> */}
 
                     {/* <label htmlFor="bday">Date of Birth</label>
                     <input id='bday' name='bday' className='form-input' type="date" /> */}
@@ -92,8 +93,8 @@ const QuotePage = () => {
                         <option value="No">No</option>
                     </select>
 
-                    <label htmlFor="phone-num">Phone Number</label>
-                    <input id='phone-num' name='phone-num' className='form-input' type="text" placeholder='Phone Number' />
+                    {/* <label htmlFor="phone-num">Phone Number</label>
+                    <input id='phone-num' name='phone-num' className='form-input' type="text" placeholder='Phone Number' /> */}
 
                     <br />
                     <button className='form-btn' onClick={quoteFormHandler}>Submit</button>

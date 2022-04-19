@@ -24,6 +24,9 @@ function HomeComp() {
                     <button onClick={handleFormSubmit} className='zip-btn'>Submit</button>
                 </div> */}
                 <h2 className='form-info'>Let us do the searching for you so you can see how much you can save with an affordable home owners insurance plan.</h2>
+                <div className='button-container'>
+                    <button onClick={() => window.location.href = '/get-quote'} className='get-quote-btn'>Get A Quote</button>
+                </div>
             </div>
 
             <div className="line"></div>
@@ -72,6 +75,10 @@ function HomeComp() {
                 <div className="what-is-info">
                     <h2>Home insurance, or homeowner's insurance (abbreviated sometimes as HOI), is a type of insurance that covers a private residence. It is a policy that groups various personal insurance protections, which can include losses occurring to one's home, its contents, loss of use living expenses, or loss of other personal possessions of the owner of the home, as well as coverage for liability for accidents that may happen at the home or at the hands of the homeowner within their property.</h2>
                 </div>
+                <div className='button-container'>
+                    <button onClick={() => window.location.href = '/get-quote'} className='get-quote-btn'>Get A Quote</button>
+                </div>
+                <br />
             </div>
         </div>
     )
