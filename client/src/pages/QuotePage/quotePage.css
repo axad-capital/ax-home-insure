@@ -40,3 +40,28 @@
     font-size: 12px;
     text-align: center;
 }
+
+.main-form-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form-img-container {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-form-container {
+        display: block;
+    }
+}
