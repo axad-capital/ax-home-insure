@@ -5,26 +5,26 @@ import './quotePage.css'
 const QuotePage = () => {
 
     function quoteFormHandler() {
-        fetch('https://api.ipify.org/?format=json')
-            .then(result => result.json())
-            .then(data => {
-                let formData = {
+        // fetch('https://api.ipify.org/?format=json')
+        //     .then(result => result.json())
+        //     .then(data => {
+                 let formData = {
                     id: uuidv4(),
                     // firstName: document.getElementById('first').value,
                     // lastName: document.getElementById('last').value,
                     // email: document.getElementById('email').value,
                     homeOwner: document.getElementById('home-owner').value,
                     insured: document.getElementById('insured').value,
-                    phone: document.getElementById('phone-num').value,
+                    // phone: document.getElementById('phone-num').value,
                     zipcode: document.getElementById('form-zip').value
                 }
 
-                let testData = {
+                let allData = {
                     "tracking": {
                         "content_type": "xml/json",
-                        "ni_ad_client": 663989,
+                        "ni_ad_client": 669716,
                         "ni_zc": formData.zipcode,
-                        "ip": data.ip,
+                        // "ip": data.ip,
                         "ua": navigator.userAgent,
                         "ni_var1": formData.id,
                         "ni_ref": "/thank-you"
@@ -46,7 +46,7 @@ const QuotePage = () => {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify(testData)
+                    body: JSON.stringify(allData)
 
                 }).then(res => {
                     return res.json()
@@ -58,7 +58,7 @@ const QuotePage = () => {
                     localStorage.setItem('adData', JSON.stringify(data))
                     window.location.href = '/thank-you'
                 })
-            })
+            // })
     }
 
     return (

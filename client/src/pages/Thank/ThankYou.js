@@ -1,4 +1,5 @@
 import React from 'react'
+import './thankYou.css'
 
 const ThankYou = () => {
     let adData = JSON.parse(localStorage.getItem('adData'))
