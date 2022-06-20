@@ -1,10 +1,9 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import './quotePage.css'
+import '../QuotePage/quotePage.css'
 import FormImg from '../../ImageSrcHosting/TV_M239_05.jpg'
 
-const QuotePage = () => {
-
+const NativeQuote = () => {
     function quoteFormHandler() {
         // fetch('https://api.ipify.org/?format=json')
         //     .then(result => result.json())
@@ -23,7 +22,7 @@ const QuotePage = () => {
         let allData = {
             "tracking": {
                 "content_type": "xml/json",
-                "ni_ad_client": 669716,
+                "ni_ad_client": 669717,
                 "ni_zc": formData.zipcode,
                 // "ip": data.ip,
                 "ua": navigator.userAgent,
@@ -53,11 +52,11 @@ const QuotePage = () => {
             return res.json()
         }).then(data => {
             if (data.listings === '') {
-                window.location.href = '/thank-you'
+                window.location.href = '/thank-you-nat'
             }
             console.log(data)
             localStorage.setItem('adData', JSON.stringify(data))
-            window.location.href = '/thank-you'
+            window.location.href = '/thank-you-nat'
         })
         // })
     }
@@ -112,4 +111,4 @@ const QuotePage = () => {
     )
 }
 
-export default QuotePage
+export default NativeQuote
