@@ -2,3 +2,10 @@
     color: rgb(0, 156, 96) !important;
     font-weight: 700;
 }
+
+.ax-home-logo {
+    width: 70%;
+    max-width: 250px;
+    margin: 0 !important;
+    cursor: pointer;
+}
