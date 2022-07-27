@@ -5,18 +5,21 @@ import FormImg from '../../ImageSrcHosting/TV_M239_05.jpg'
 
 const QuotePage = () => {
 
+    function getVarId() {
+        var url = window.location.href;
+        var match = url.match(/source=(\d+)/)
+        if (match) {
+            var varId = match[1];
+            return varId
+        }
+        return 21
+    }
+
     function quoteFormHandler() {
-        // fetch('https://api.ipify.org/?format=json')
-        //     .then(result => result.json())
-        //     .then(data => {
         let formData = {
             id: uuidv4(),
-            // firstName: document.getElementById('first').value,
-            // lastName: document.getElementById('last').value,
-            // email: document.getElementById('email').value,
             homeOwner: document.getElementById('home-owner').value,
             insured: document.getElementById('insured').value,
-            // phone: document.getElementById('phone-num').value,
             zipcode: document.getElementById('form-zip').value
         }
 
@@ -27,13 +30,10 @@ const QuotePage = () => {
                 "ni_zc": formData.zipcode,
                 // "ip": data.ip,
                 "ua": navigator.userAgent,
-                "ni_var1": formData.id,
+                "ni_var1": getVarId(),
                 "ni_ref": "/thank-you"
             },
             "contact": {
-                // "first_name": formData.firstName,
-                // "last_name": formData.lastName,
-                // "email": formData.email,
                 "zip": formData.zipcode,
                 "homeowner": formData.homeOwner,
             },
